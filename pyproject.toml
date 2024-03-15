@@ -38,7 +38,7 @@ dependencies    = [
     "fnv-hash-fast==0.5.0",
     # hass-nabucasa is imported by helpers which don't depend on the cloud
     # integration
-    "hass-nabucasa==0.78.0",
+    "hass-nabucasa==0.79.0",
     # When bumping httpx, please check the version pins of
     # httpcore, anyio, and h11 in gen_requirements_all
     "httpx==0.27.0",
@@ -599,9 +599,7 @@ select = [
     "N804", # First argument of a class method should be named cls
     "N805", # First argument of a method should be named self
     "N815", # Variable {name} in class scope should not be mixedCase
-    "PERF101", # Do not cast an iterable to list before iterating over it
-    "PERF102", # When using only the {subset} of a dict use the {subset}() method
-    "PERF203", # try-except within a loop incurs performance overhead
+    "PERF", # Perflint
     "PGH004", # Use specific rule codes when using noqa
     "PLC0414", # Useless import alias. Import alias does not rename original package.
     "PLC", # pylint
@@ -690,6 +688,7 @@ ignore = [
 [tool.ruff.lint.flake8-import-conventions.extend-aliases]
 voluptuous = "vol"
 "homeassistant.helpers.area_registry" = "ar"
+"homeassistant.helpers.category_registry" = "cr"
 "homeassistant.helpers.config_validation" = "cv"
 "homeassistant.helpers.device_registry" = "dr"
 "homeassistant.helpers.entity_registry" = "er"
